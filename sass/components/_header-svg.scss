@@ -1,0 +1,34 @@
+#head {
+    transform-origin: center;
+    animation: head 1s ease-in-out alternate infinite;
+}
+
+#right-arm {
+    transform-origin: center;
+    animation: right-arm 1s ease-in-out alternate infinite;
+}
+
+#left-arm {
+    transform-origin: center;
+    animation: left-arm 1s ease-in-out alternate infinite;
+}
+
+#cloud-1 {
+    transform-origin: left;
+    animation: cloud1 1s ease-in-out alternate infinite;
+}
+
+#cloud-2 {
+    animation: cloud2 1s ease-in-out alternate infinite;;
+}
+
+#leaf-grp1 {
+    animation: leaf1 1s ease-in-out alternate infinite;;
+    transform-origin: bottom;
+}
+#leaf-grp2 {
+    animation: leaf2 1s ease-in-out alternate infinite;;
+    transform-origin: bottom;
+}
+
+

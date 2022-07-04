@@ -1,0 +1,45 @@
+
+
+.feature-box {
+    background-color: rgba($color-white, .8);
+    font-size: 1.5rem;
+    text-align: center;
+    padding: 2.5rem;
+    border-radius: 2rem;
+    text-transform: capitalize;
+    overflow: hidden;
+    
+    box-shadow: 0 1.5rem 4rem rgba($color-black, .15);
+    transition: transform .3s;
+
+    @include respond (tab-port) {
+        padding: 2rem;
+    }
+
+    &:hover {
+        transform: translateY(-1rem) scale(1.05);
+        box-shadow: 0 2.5rem 5rem rgba($color-black, .25);
+    }
+
+    &__image {
+        width: 100%;
+        margin-bottom: 1.5rem;
+    }
+    &__buy-now {
+        margin-top: 3rem;
+    }
+    &__author {
+        font-family: cursive;
+        font-style: italic;
+        margin-bottom: 1rem;
+    }
+    &__price {
+        font-size: 1.2rem;
+        font-weight: 700;
+        
+    }
+    &__value {
+        font-size: 2rem;
+        font-weight: 300;
+    }   
+}

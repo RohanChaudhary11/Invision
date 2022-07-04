@@ -1,0 +1,68 @@
+.header {
+    height: 95vh;
+
+    background-image: linear-gradient(
+        to right bottom, 
+        rgba($color-primary-light, 0.85), 
+        rgba($color-primary-dark, 0.85)),
+    url(../images/bookshop.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+    transition: all .2s;
+    
+    -webkit-clip-path: polygon(0 0, 100% 0, 100% 75%, 40% 100%, 0 100%);
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 40% 100%, 0 100%);
+    background-color: $color-grey-light-1;
+
+    @include respond (tab-port) {
+        -webkit-clip-path: polygon(0 0, 100% 0, 100% 85%,50% 100%, 0 85%);
+        clip-path: polygon(0 0, 100% 0, 100% 85%,50% 100%, 0 85%);
+    }
+
+    &__svg {
+        height: 100%;
+        width: 45%;
+        padding: 5rem 15rem;
+        margin-left: -3rem;
+
+        @include respond (tab-land) {
+            margin-left: -6rem;
+            width: 55%;
+        }
+        @include respond (tab-port) {
+            height: 0;
+            width: 0;
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+
+    &__logo-box{
+        position: absolute;
+        top: 2.5rem;
+        left: 4rem;
+    }
+    &__logo {
+        height: 6.5rem;
+
+        &:hover {
+            transform: scale(1.1);
+            animation: rotate 1s ease-out;
+            cursor: pointer;
+        }
+    }
+    
+    &__text-box {
+        position: absolute;
+        top: 45%;
+        left: 60%;
+        /* background-color: red; */
+        transform: translate(-50%, -50%);
+        text-align: center;
+
+        @include respond (tab-port) {
+            left: 50%;
+        }
+    }
+}

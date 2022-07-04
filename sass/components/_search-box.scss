@@ -1,0 +1,80 @@
+.search-box {
+    // background-color: orangered;
+    // padding: 2rem;
+    // display: block;
+    width: 20%;
+    display: block;
+    float: right;
+    margin-right: 15rem;
+    position: relative;
+
+    @include respond (tab-port) {
+        width: 100%;
+        float: none;
+        margin: 0 15rem 0 15rem;
+    }
+
+    &__icon {
+        color: $color-grey-dark-3;
+        font-size: 3.1rem;
+        
+        display: inline;
+        position: absolute;
+        top: .5rem;
+        right: 1.5rem;
+    }
+
+    &__input {
+        font-size: 1.5rem;
+        font-family: inherit;
+        color: inherit;
+        font-weight: 700;
+        padding: 1.5rem 2rem;
+        border-radius: 2px;
+        background-color: rgba($color-white, .8);
+        border: none;
+        border-bottom: 4px solid transparent;
+        width: 100%;
+        display: inline-block;
+        // background-image: url(../images/search-logo.jpg);
+        // background-size: auto 100%;
+        // background-repeat: no-repeat;
+        // background-position: right center;
+
+        transition: all .3s;
+
+        &:focus {
+            outline: none;
+            box-shadow: 0 1rem 2rem rgba($color-black,.1);
+            border-bottom: 4px solid $color-primary;
+
+            &:invalid {
+                border-bottom: 4px solid $color-secondary-dark;
+            }
+
+        }
+
+        &::-webkit-input-placeholder {
+            color: $color-grey-dark-2;
+        }
+
+    }
+
+    
+    &__label {
+        color: $color-white;
+        font-size: 1.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+        margin-top: 0.7rem;
+        display: block;
+        transition: all .3s;
+    }
+
+    &__input:placeholder-shown + &__label {
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-4rem);
+    }
+
+}
